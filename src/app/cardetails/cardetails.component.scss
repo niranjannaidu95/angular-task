@@ -1,0 +1,116 @@
+div  h1{
+  margin-left: 200px;
+  font-family: LatoGoogle,Lato,LatoWeb,sans-serif;
+    color: #484848;
+}
+.icon{
+  margin-left: 200px;
+  font-size: 20px;
+  color:#00afa0;
+}
+.icon1{
+  margin-left: 10px;
+  font-size: 20px;
+  color:#00afa0;
+}
+.icon2{
+  margin-left: 10px;
+  font-size: 20px;
+  color:#00afa0;
+}
+.icon3{
+  margin-left: 10px;
+  font-size: 20px;
+  color:#00afa0;
+}
+.icon4{
+  margin-left: 10px;
+  font-size: 20px;
+  color:#00afa0;
+}
+
+
+.text{
+  margin-right: 10px;
+  color:#00afa0;
+  cursor: pointer;
+}
+.or{
+  margin-right: 5px;
+}
+.text1{
+  margin-right: 20px;
+  color:#00afa0;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+main{
+  width: 80%;
+  margin: auto;
+  border: 1px solid rgb(204, 195, 195);
+  margin-top: 5px;
+
+}
+.rupees{
+  font-size: 25px;
+}
+.close{
+  cursor: pointer;
+}
+
+
+.example-card {
+  padding: 0;
+
+  img{
+      float: left;
+  }
+
+
+  mat-card-content{
+      float: left;
+      margin-top: 60px;
+      padding-left: 0px;
+      width: 40%;
+      height: 200px;
+      text-align: center;
+      button{
+          padding: 15px 20px;
+          background-color: red;
+          font-size: 20px;
+          color: #ffffff;
+          cursor: pointer;
+
+
+          }
+
+        }
+      }
+
+    mat-drawer{
+        position: absolute;
+        right: 0;
+        width: 30%;
+    }
+ p{
+  text-decoration: solid;
+  margin-left: 25px;
+}
+.table{
+  margin-bottom: 0;
+  width: 90%;
+  border: 2px solid rgb(161, 158, 158);
+}
+
+
+
+
+
+
+

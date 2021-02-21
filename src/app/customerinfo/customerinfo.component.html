@@ -1,0 +1,55 @@
+
+<!-- <input type="search" placeholder="Type your city" class="location"><br><br>
+<button class="btn" (click)="inputFields()" >Confirm</button> -->
+
+
+<form [style.display]="toggle" class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>CHOOSE CITY</mat-label>
+    <input type="text" class="location" [(ngModel)]="userinput" (keyup)="getLocation(userinput)" required
+    aria-label="cities"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete  #auto="matAutocomplete">
+      <div *ngIf = "options">
+      <mat-option *ngFor="let option of options" [value]="option.result">
+        {{option.result}}
+      </mat-option>
+    </div>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+
+
+
+
+<div *ngIf="userinput" >
+<button [style.display]="btn" class="locbtn"  (click)="chooseNamefield()">Confirm</button>
+<form>
+  <fieldset  [style.display]="inputToggle">
+
+    <label for="fullname"> Full Name : </label><br>
+    <input  type="text"  class="namebox"  [(ngModel)]="user.name" name="fullname" required />
+    <br><br>
+    <label for="ph_no"> Phone Number : </label><br>
+    <input type="text" class="namebox1" id="phoneno"  [(ngModel)] = "user.phone_number"  name="ph_no" required />
+    <br><br>
+    <button type="submit" class="locbtn1"  [style.display]="btn2" (click)="greetbtn()">Confirm</button>
+  </fieldset>
+</form>
+</div>
+<div [style.display]="greet">
+<h3>Thank you {{user.name}} !</h3>
+<p>A car consultant would get in touch with  you shortly  <br>with assistance on your purchase.</p>
+<div *ngIf="userinput"><label for="email"> Email ID</label><br>
+    <input type="email" class="namebox2" [(ngModel)] = "user.email" name="email" required /><br><br>
+  </div>
+
+  <div >
+    <button   class="locbtn2" [style.display]="btn3" (click)="backAgain()">Done</button>
+
+
+  </div>
+</div>

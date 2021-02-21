@@ -1,0 +1,80 @@
+
+<div>
+  <h1>Tata Naxon</h1></div>
+
+<div>
+ <span class="icon">  <i class="fa fa-star" aria-hidden="true"></i>
+ </span>
+ <span class="icon1">  <i class="fa fa-star" aria-hidden="true"></i>
+ </span>
+ <span class="icon2">  <i class="fa fa-star" aria-hidden="true"></i>
+ </span>
+ <span class="icon3">  <i class="fa fa-star" aria-hidden="true"></i>
+ </span>
+  <span  class="icon4">
+  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+</span>
+
+<span class="text"> 414 Reviews</span>
+<span class="or"> |</span>
+<span class="text1"> Write a review</span>
+
+</div>
+
+
+
+<br><br>
+<main>
+  <mat-drawer-container class="example-container" [hasBackdrop]="'true'">
+    <mat-drawer #drawer  [mode]="'over'">
+      <mat-toolbar class="header">
+        <mat-icon class="close"
+       (click)="drawer.close()">close</mat-icon>
+          <p>Welcome to the carewale!!</p><br>
+      </mat-toolbar>
+
+<app-customerinfo></app-customerinfo>
+</mat-drawer>
+
+    <mat-drawer-content>
+
+  <mat-card class="example-card">
+      <img src="../assets/images/img2.png" alt="Tata-Nexon" width="50%" height="300px">
+      <mat-card-content>
+        <div class="rupees">  <span>₹ 8.69 Lakh</span><br>
+          <h5>On-Road Price, Bangalore</h5>
+        </div>
+
+
+
+          <button (click)="drawer.toggle()">Get February Offers</button><br><br><br>
+          <button class="button1" (click)="opencusInfo()">Customer Details</button>
+          </mat-card-content>
+          <mat-card-content [style.display] = "customersinfo">
+            <div>
+              <table class="table">
+                <thead class="table">
+                  <tr>
+                  <th> Id</th>
+                  <th>Name </th>
+                  <th>Phone.No </th>
+                  <th>Email </th>
+                </tr>
+                </thead>
+                <tbody class="table"  *ngFor="let user of customerDetails.users">
+                  <tr class="table">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.phone_number}}</td>
+                    <td>{{user.email}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </mat-card-content>
+
+    </mat-card>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+</main>
