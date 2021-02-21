@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 export type User = {
   id: number;
   name: string;
-  phone_number: number;
+  phone_number: any;
   email: string;
 };
 export class CustomerDetailsService {

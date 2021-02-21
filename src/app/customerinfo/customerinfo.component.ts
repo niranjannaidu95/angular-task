@@ -11,6 +11,7 @@ import { LocationService,} from '../location.service';
 
 })
 export class CustomerinfoComponent implements OnInit {
+  public fullname!: string;
 
   constructor(private service : LocationService, private cusDetails :CustomerDetailsService){
 
@@ -27,14 +28,17 @@ export class CustomerinfoComponent implements OnInit {
   public btn2: string = "none";
   public btn3: string = "none";
   public greet: string = "none";
-  public user: User = { id: 0, name: "", phone_number : 0, email : "" };
+  public user: User = { id: 0, name: "", phone_number : "", email : "" };
 
 
   getLocation(data : string){
       this.service.getLocation(data).subscribe(cities => this.options = cities)
   }
+  clearFilters() {
 
-  chooseNamefield(){
+  this.fullname = '';
+  }
+  userfield(){
  this.toggle = "none";
  this.inputToggle = "block";
  this.btn ="none";

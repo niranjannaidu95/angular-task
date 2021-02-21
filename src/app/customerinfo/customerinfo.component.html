@@ -26,12 +26,12 @@
 
 
 <div *ngIf="userinput" >
-<button [style.display]="btn" class="locbtn"  (click)="chooseNamefield()">Confirm</button>
+<button [style.display]="btn" class="locbtn"  (click)="userfield()">Confirm</button>
 <form>
   <fieldset  [style.display]="inputToggle">
 
     <label for="fullname"> Full Name : </label><br>
-    <input  type="text"  class="namebox"  [(ngModel)]="user.name" name="fullname" required />
+    <input  type="text"  class="namebox"  [(ngModel)]="user.name"  #fullname name="fullname" required />
     <br><br>
     <label for="ph_no"> Phone Number : </label><br>
     <input type="text" class="namebox1" id="phoneno"  [(ngModel)] = "user.phone_number"  name="ph_no" required />
@@ -41,14 +41,14 @@
 </form>
 </div>
 <div [style.display]="greet">
-<h3>Thank you {{user.name}} !</h3>
+<h3>Thank you {{user.name}} !!</h3>
 <p>A car consultant would get in touch with  you shortly  <br>with assistance on your purchase.</p>
 <div *ngIf="userinput"><label for="email"> Email ID</label><br>
     <input type="email" class="namebox2" [(ngModel)] = "user.email" name="email" required /><br><br>
   </div>
 
   <div >
-    <button   class="locbtn2" [style.display]="btn3" (click)="backAgain()">Done</button>
+    <button   class="locbtn2" [style.display]="btn3" (click)="clearFilters()" (click)="backAgain()">Done</button>
 
 
   </div>
