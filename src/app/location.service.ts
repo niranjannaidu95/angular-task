@@ -13,7 +13,7 @@ export class LocationService {
     const httpParams = new HttpParams({
       fromObject:{
         term : data,
-        record : "5",
+        record : "6",
         sourceId : "1",
       }
     });

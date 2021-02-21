@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
 
-export type User = {
+export type Customer = {
   id: number;
   name: string;
+
   phone_number: any;
   email: string;
 };
-export class CustomerDetailsService {
-  public users: User[] = [];
+export class CustomerDetailsService
+{
+  public customers: Customer[] = [];
   public count = 1;
 
-  public addUser(user: User) {
-      this.users.push({...user, id: this.count++});
+  public addCustomer(customer: Customer)
+  {
+      this.customers.push({...customer, id: this.count++});
   }
 }
